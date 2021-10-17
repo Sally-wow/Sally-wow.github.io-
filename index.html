@@ -72,6 +72,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo博客同步管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/" class="article-date">
+  <time class="dt-published" datetime="2021-10-17T08:27:51.000Z" itemprop="datePublished">2021-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/">跨设备同步博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="1-新电脑中的环境搭建"><a href="#1-新电脑中的环境搭建" class="headerlink" title="1. 新电脑中的环境搭建"></a>1. 新电脑中的环境搭建</h2><ol>
+<li>安装 Node.js、git、hexo</li>
+<li>clone远程仓库到本地 <code>git clone git@github.com:username/username.github.io.git</code>。</li>
+<li>本地生成网站并开启博客服务器：<code>hexo g &amp; hexo s</code>。如果一切正常，此时打开浏览器输入<code>http://localhost:4000/</code>已经可以看到博客正常运行了。</li>
+</ol>
+<h2 id="2-同步博客"><a href="#2-同步博客" class="headerlink" title="2. 同步博客"></a>2. 同步博客</h2><ol>
+<li><p><code>git pull</code>从远程仓库的hexo分支拉取最新的Hexo环境到本地，</p>
+</li>
+<li><p>文章写完，要发布时，需要先提交环境文件，再发布文章。按以下顺序执行命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;some descrption</span><br><span class="line">git push origin hexo</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/" data-id="ckuuy2qg900006kfd0zh7f4lq" data-title="跨设备同步博客" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Windows下使用hexo+github搭建个人博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/14/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
@@ -182,45 +231,6 @@
 
 
   
-    <article id="post-第一篇博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/10/13/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time class="dt-published" datetime="2021-10-13T08:27:51.000Z" itemprop="datePublished">2021-10-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/10/13/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>测试内容</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/13/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ckuqdk4yv0002fwfdacrtcxcq" data-title="第一篇博客" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
@@ -252,11 +262,11 @@
       <ul>
         
           <li>
-            <a href="/2021/10/14/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Windows下使用hexo+github搭建个人博客</a>
+            <a href="/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/">跨设备同步博客</a>
           </li>
         
           <li>
-            <a href="/2021/10/13/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
+            <a href="/2021/10/14/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Windows下使用hexo+github搭建个人博客</a>
           </li>
         
       </ul>
