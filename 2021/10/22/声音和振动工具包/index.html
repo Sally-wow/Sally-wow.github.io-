@@ -6,12 +6,12 @@
   
   <title>LabVIEW声音和振动工具包学习 | C404</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="LabVIEW声音和振动工具包简要总结  1. 引言  将信号缩放到工程单位（EU） 校准测量通道 应用加权滤波器 时域信号整合 执行级别测量 进行正弦扫频测量 进行单音测量 执行限制和屏蔽测试 执行分数倍频程分析 执行频率分析 进行瞬态分析 执行失真分析 显示结果     Scaling SVL缩放电压至EU VI允许您将原始信号缩放至工程单位。至EU VI的SVL标度电压是声音和振动库的一部">
+  <meta name="description" content="**作者：孙帅恒 ** 日期：2021年10月22日  1. 引言  将信号缩放到工程单位（EU） 校准测量通道 应用加权滤波器 时域信号整合 执行级别测量 进行正弦扫频测量 进行单音测量 执行限制和屏蔽测试 执行分数倍频程分析 执行频率分析 进行瞬态分析 执行失真分析 显示结果     Scaling SVL缩放电压至EU VI允许您将原始信号缩放至工程单位。至EU VI的SVL标度电压是声音和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LabVIEW声音和振动工具包学习">
 <meta property="og:url" content="http://example.com/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/index.html">
 <meta property="og:site_name" content="C404">
-<meta property="og:description" content="LabVIEW声音和振动工具包简要总结  1. 引言  将信号缩放到工程单位（EU） 校准测量通道 应用加权滤波器 时域信号整合 执行级别测量 进行正弦扫频测量 进行单音测量 执行限制和屏蔽测试 执行分数倍频程分析 执行频率分析 进行瞬态分析 执行失真分析 显示结果     Scaling SVL缩放电压至EU VI允许您将原始信号缩放至工程单位。至EU VI的SVL标度电压是声音和振动库的一部">
+<meta property="og:description" content="**作者：孙帅恒 ** 日期：2021年10月22日  1. 引言  将信号缩放到工程单位（EU） 校准测量通道 应用加权滤波器 时域信号整合 执行级别测量 进行正弦扫频测量 进行单音测量 执行限制和屏蔽测试 执行分数倍频程分析 执行频率分析 进行瞬态分析 执行失真分析 显示结果     Scaling SVL缩放电压至EU VI允许您将原始信号缩放至工程单位。至EU VI的SVL标度电压是声音和">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85%E6%A6%82%E8%BF%B0.png">
 <meta property="og:image" content="http://example.com/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://example.com/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/Leq%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F.png">
 <meta property="og:image" content="http://example.com/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E5%80%8D%E9%A2%91%E7%A8%8B%E6%BB%A4%E6%B3%A2%E5%99%A8%EF%BC%88%E5%88%86%E6%9E%90%E5%A4%8D%E5%90%88%E5%A3%B0%E5%92%8C%E5%99%AA%E5%A3%B0%E9%A2%91%E8%B0%B1%E8%83%BD%E7%9A%84%E5%90%AB%E9%87%8F%EF%BC%89.png">
 <meta property="article:published_time" content="2021-10-22T11:34:25.908Z">
-<meta property="article:modified_time" content="2021-10-22T13:17:27.778Z">
+<meta property="article:modified_time" content="2021-10-22T13:33:36.951Z">
 <meta property="article:author" content="Sun">
 <meta property="article:tag" content="孙帅恒">
 <meta name="twitter:card" content="summary">
@@ -110,7 +110,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="labview声音和振动工具包简要总结"><a class="markdownIt-Anchor" href="#labview声音和振动工具包简要总结"></a> LabVIEW声音和振动工具包简要总结</h1>
+        <p>**作者：孙帅恒 **</p>
+<p><strong>日期：2021年10月22日</strong></p>
 <h2 id="1-引言"><a class="markdownIt-Anchor" href="#1-引言"></a> 1. 引言</h2>
 <ul>
 <li>将信号缩放到工程单位（EU）</li>
