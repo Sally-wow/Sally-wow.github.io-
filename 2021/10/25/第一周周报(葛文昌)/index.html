@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>本周学习总结（2021.10.18-10.24） | C404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="作者：葛文昌 日期：2021年10月24日  1.Channel self-adjusting filtered-x LMS algorithm for active control of vehicle road noise学习总结  文章主体思路  ARNC系统通常采用多个参考信号，由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果。因此该研究采用的CSFxLMS算法是基于传">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本周学习总结（2021.10.18-10.24）">
+<meta property="og:url" content="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/index.html">
+<meta property="og:site_name" content="C404">
+<meta property="og:description" content="作者：葛文昌 日期：2021年10月24日  1.Channel self-adjusting filtered-x LMS algorithm for active control of vehicle road noise学习总结  文章主体思路  ARNC系统通常采用多个参考信号，由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果。因此该研究采用的CSFxLMS算法是基于传">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-25T09:31:08.339Z">
+<meta property="article:modified_time" content="2021-10-25T05:37:45.000Z">
+<meta property="article:author" content="Sun">
+<meta property="article:tag" content="葛文昌">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="C404" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+
+  <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">C404</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第一周周报(葛文昌)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.339Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      本周学习总结（2021.10.18-10.24）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><em>作者：葛文昌</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<h2 id="1channel-self-adjusting-filtered-x-lms-algorithm-for-active-control-of-vehicle-road-noise学习总结"><a class="markdownIt-Anchor" href="#1channel-self-adjusting-filtered-x-lms-algorithm-for-active-control-of-vehicle-road-noise学习总结"></a> 1.<em>Channel self-adjusting filtered-x LMS algorithm for active control of vehicle road noise学习总结</em></h2>
+<h3 id="文章主体思路"><a class="markdownIt-Anchor" href="#文章主体思路"></a> 文章主体思路</h3>
+<h4 id="arnc系统通常采用多个参考信号由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果-因此该研究采用的csfxlms算法是基于传统fxlms算法在每个参考信号路径中加入自调整参数以最小化参考信号的动态特性影响-利用实测道路噪声响应进行数值仿真结果表明csfxlms算法较传统fxlms算法性能显著提高"><a class="markdownIt-Anchor" href="#arnc系统通常采用多个参考信号由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果-因此该研究采用的csfxlms算法是基于传统fxlms算法在每个参考信号路径中加入自调整参数以最小化参考信号的动态特性影响-利用实测道路噪声响应进行数值仿真结果表明csfxlms算法较传统fxlms算法性能显著提高"></a> ARNC系统通常采用多个参考信号，由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果。因此该研究采用的CSFxLMS算法是基于传统FxLMS算法在每个参考信号路径中加入自调整参数以最小化参考信号的动态特性影响。利用实测道路噪声响应进行数值仿真，结果表明CSFxLMS算法较传统FxLMS算法性能显著提高。</h4>
+<h3 id="文章结构"><a class="markdownIt-Anchor" href="#文章结构"></a> 文章结构</h3>
+<p>文章总体分为六节：</p>
+<h4 id="第1节通过介绍汽车研究开发中重要指标与降噪目标引出anc系统并简述anc系统的发展"><a class="markdownIt-Anchor" href="#第1节通过介绍汽车研究开发中重要指标与降噪目标引出anc系统并简述anc系统的发展"></a> 第1节通过介绍汽车研究开发中重要指标与降噪目标引出ANC系统，并简述ANC系统的发展。</h4>
+<h4 id="第2节介绍了被测车辆中参考传感器位置和数量的选择-由于arnc系统采用前馈系统结构故需要多个参考信号主要采用了多重相干函数和pca方法"><a class="markdownIt-Anchor" href="#第2节介绍了被测车辆中参考传感器位置和数量的选择-由于arnc系统采用前馈系统结构故需要多个参考信号主要采用了多重相干函数和pca方法"></a> 第2节介绍了被测车辆中参考传感器位置和数量的选择。由于ARNC系统采用前馈系统结构，故需要多个参考信号，主要采用了多重相干函数和PCA方法。</h4>
+<h4 id="第3节详细介绍了csfxlms算法对该算法中的重点λ参数进行介绍并得出该算法的自适应权矢量迭代方程"><a class="markdownIt-Anchor" href="#第3节详细介绍了csfxlms算法对该算法中的重点λ参数进行介绍并得出该算法的自适应权矢量迭代方程"></a> 第3节详细介绍了CSFxLMS算法，对该算法中的重点λ参数进行介绍，并得出该算法的自适应权矢量迭代方程。</h4>
+<h4 id="第4节对csfxlms算法的收敛性进行分析并与传统fxlms算法进行比较得出csfxlms算法采用λ参数可以提高系统的收敛速度"><a class="markdownIt-Anchor" href="#第4节对csfxlms算法的收敛性进行分析并与传统fxlms算法进行比较得出csfxlms算法采用λ参数可以提高系统的收敛速度"></a> 第4节对CSFxLMS算法的收敛性进行分析，并与传统FxLMS算法进行比较得出CSFxLMS算法采用λ参数可以提高系统的收敛速度。</h4>
+<h4 id="第5节对csfxlms算法计算复杂度进行分析得出该算法和传统fxlms算法具有相似的计算成本"><a class="markdownIt-Anchor" href="#第5节对csfxlms算法计算复杂度进行分析得出该算法和传统fxlms算法具有相似的计算成本"></a> 第5节对CSFxLMS算法计算复杂度进行分析，得出该算法和传统FxLMS算法具有相似的计算成本。</h4>
+<h4 id="第6节利用实测车辆道路噪声数据进行数值仿真结果表明提出的csfxlms算法具有更好的降噪效果"><a class="markdownIt-Anchor" href="#第6节利用实测车辆道路噪声数据进行数值仿真结果表明提出的csfxlms算法具有更好的降噪效果"></a> 第6节利用实测车辆道路噪声数据进行数值仿真，结果表明提出的CSFxLMS算法具有更好的降噪效果。</h4>
+<h4 id="第7节给出文章结论并予以总结"><a class="markdownIt-Anchor" href="#第7节给出文章结论并予以总结"></a> 第7节给出文章结论并予以总结。</h4>
+<h3 id="学习目标"><a class="markdownIt-Anchor" href="#学习目标"></a> 学习目标</h3>
+<h4 id="本文提出的csfxlms算法中的创新点值得深入思考-对于传统fxlms算法原理需要深度理解-需要对算法matlab程序需要进行深度学习"><a class="markdownIt-Anchor" href="#本文提出的csfxlms算法中的创新点值得深入思考-对于传统fxlms算法原理需要深度理解-需要对算法matlab程序需要进行深度学习"></a> 本文提出的CSFxLMS算法中的创新点值得深入思考。对于传统FxLMS算法原理需要深度理解。需要对算法MATLAB程序需要进行深度学习。</h4>
+<h2 id="2有源噪声控制学习总结"><a class="markdownIt-Anchor" href="#2有源噪声控制学习总结"></a> <em>2.有源噪声控制学习总结</em></h2>
+<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
+<h4 id="传统噪声控制采用无源噪声控制方法包括吸声-隔声和消声器-传统降噪方法降噪效果较差且缺点较多为此有源噪声控制得以提出和发展-有源噪声控制思想是通过人为产生一个用于抵消初级噪声的信号-进一步提出了自适应有源噪声控制系统能够根据监测信号不断地调整控制器参数从而实时改变控制器输出达到持续良好的降噪效果"><a class="markdownIt-Anchor" href="#传统噪声控制采用无源噪声控制方法包括吸声-隔声和消声器-传统降噪方法降噪效果较差且缺点较多为此有源噪声控制得以提出和发展-有源噪声控制思想是通过人为产生一个用于抵消初级噪声的信号-进一步提出了自适应有源噪声控制系统能够根据监测信号不断地调整控制器参数从而实时改变控制器输出达到持续良好的降噪效果"></a> 传统噪声控制采用“无源”噪声控制方法包括吸声、隔声和消声器。传统降噪方法降噪效果较差且缺点较多，为此有源噪声控制得以提出和发展。有源噪声控制思想是通过人为产生一个用于抵消初级噪声的信号。进一步提出了自适应有源噪声控制系统，能够根据监测信号不断地调整控制器参数，从而实时改变控制器输出达到持续良好的降噪效果。</h4>
+<h3 id="lms算法"><a class="markdownIt-Anchor" href="#lms算法"></a> LMS算法</h3>
+<h4 id="维纳滤波输入xnsnvn式中sn表示信号真值vn表示噪声-输出yn等于sn的估计值hatsn-维纳滤波能使sn与hatsn之间均方误差最小即jnee2n最小-jn为目标函数"><a class="markdownIt-Anchor" href="#维纳滤波输入xnsnvn式中sn表示信号真值vn表示噪声-输出yn等于sn的估计值hatsn-维纳滤波能使sn与hatsn之间均方误差最小即jnee2n最小-jn为目标函数"></a> 维纳滤波输入x(n)=s(n)+v(n)，式中：s(n)表示信号真值，v(n)表示噪声。输出y(n)等于s(n)的估计值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>s</mi></mrow><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat{s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">s</span></span></span><span style="top:0em;margin-left:0.11112em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>(n)。维纳滤波能使s(n)与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>s</mi></mrow><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat{s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">s</span></span></span><span style="top:0em;margin-left:0.11112em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>(n)之间均方误差最小即：J(n)=E[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>e</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">e^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>(n)]最小。J(n)为目标函数。</h4>
+<h4 id="自适应滤波器可以自动调节它的脉冲响应以满足均方误差最小准则-自适应过程就是连续不断地调节滤波器权系数以得到最佳权矢量w"><a class="markdownIt-Anchor" href="#自适应滤波器可以自动调节它的脉冲响应以满足均方误差最小准则-自适应过程就是连续不断地调节滤波器权系数以得到最佳权矢量w"></a> 自适应滤波器可以自动调节它的脉冲响应以满足均方误差最小准则。自适应过程就是连续不断地调节滤波器权系数以得到最佳权矢量W。</h4>
+<h4 id="lms算法就是求w采用最陡下降法原理得到权矢量迭代方程"><a class="markdownIt-Anchor" href="#lms算法就是求w采用最陡下降法原理得到权矢量迭代方程"></a> LMS算法就是求W，采用最陡下降法原理得到权矢量迭代方程：</h4>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi><mo>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>W</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>+</mo><mn>2</mn><mi>μ</mi><mi>e</mi><mo>(</mo><mi>n</mi><mo>)</mo><mi>X</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">W(n+1)=W(n)+2\mu e(n)X(n)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mord mathit">μ</span><span class="mord mathit">e</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="fxlms算法"><a class="markdownIt-Anchor" href="#fxlms算法"></a> FxLMS算法</h3>
+<h4 id="fxlms算法相较于lms算法基础上加入了一个次级路径-通过横向滤波器结构以及矢量形式推导提出矢量rn即滤波-x信号矢量进而利用最陡下降法原理得出权矢量迭代公式"><a class="markdownIt-Anchor" href="#fxlms算法相较于lms算法基础上加入了一个次级路径-通过横向滤波器结构以及矢量形式推导提出矢量rn即滤波-x信号矢量进而利用最陡下降法原理得出权矢量迭代公式"></a> FxLMS算法相较于LMS算法基础上加入了一个次级路径。通过横向滤波器结构以及矢量形式推导提出矢量r(n)即滤波-x信号矢量，进而利用最陡下降法原理得出权矢量迭代公式：</h4>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi><mo>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>W</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>−</mo><mn>2</mn><mi>μ</mi><mi>e</mi><mo>(</mo><mi>n</mi><mo>)</mo><mi>r</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">W(n+1)=W(n)-2\mu e(n)r(n)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mord mathit">μ</span><span class="mord mathit">e</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" data-id="ckv6hiaes000b2cfd2jth79vg" data-title="本周学习总结（2021.10.18-10.24）" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" rel="tag">葛文昌</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          GWPE程序学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">NI说明的笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+  <section id="comments" class="vcomment">
+
+  </section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" rel="tag">孙帅恒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" rel="tag">孙芯年</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" rel="tag">王绍博</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%9B%B7/" rel="tag">王雷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" rel="tag">葛文昌</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%88%E6%99%A8/" rel="tag">陈晨</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" style="font-size: 10px;">孙帅恒</a> <a href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" style="font-size: 10px;">孙芯年</a> <a href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" style="font-size: 10px;">王绍博</a> <a href="/tags/%E7%8E%8B%E9%9B%B7/" style="font-size: 10px;">王雷</a> <a href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" style="font-size: 10px;">葛文昌</a> <a href="/tags/%E9%99%88%E6%99%A8/" style="font-size: 10px;">陈晨</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/">音频数据采集和PEAQ的matlab信号测试</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/">GWPE程序学习</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/">本周学习总结（2021.10.18-10.24）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/">NI说明的笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/">自适应信号处理</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Sun<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "gV7fnKIV0zHALkfaREcR42TB-9Nh9j0Va",
+        appKey: "6whPJ4UtLfXFj4xlmldTPfqd",
+        placeholder: "Just go go",
+        pageSize:'10',
+        avatar:'mm',
+        lang:'zh-cn'
+    });
+</script>
+
+  </div>
+</body>
+</html>

@@ -75,9 +75,421 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-声音和振动工具包" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-第一周周报(孙芯年)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/" class="article-date">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:38:26.409Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/">音频数据采集和PEAQ的matlab信号测试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><em>作者：孙芯年</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<p>1.<a target="_blank" rel="noopener" href="https://www.mcgill.ca/music/about-us/hire-student-musicians/audio-samples">Audio Samples | Music - McGill University</a>找到一些双通道的弦乐信号，有钢琴，小提琴，大提琴，以及相关弦乐与打击乐的混合声音，但是它们是mp3形式。</p>
+<p>2.<a target="_blank" rel="noopener" href="https://freewavesamples.com/sample-type/drums/kick?page=1">Drums - Kick (Page 2) | Free Wave Samples</a>找到一些打击乐的一些原始的数据，时间较短，幅度太小，需要进一步叠加。</p>
+<p>3.PEAQ测试信号与原始信号的程序跑通了，文章原始倒谱方法与改进后的倒谱方法也进行比较了，目前需要的就是找到原始纯粹的单通道信号以便进行分析。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/" data-id="ckv6hiaeg00062cfdfh5jgbjr" data-title="音频数据采集和PEAQ的matlab信号测试" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" rel="tag">孙芯年</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第一周周报(陈晨)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.350Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/">GWPE程序学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><em>作者：陈晨</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<h1 id="generalization-of-multi-channel-linear-prediction-methods-for-blind-mimo-impulse-response-shortening-论文程序的学习"><a class="markdownIt-Anchor" href="#generalization-of-multi-channel-linear-prediction-methods-for-blind-mimo-impulse-response-shortening-论文程序的学习"></a> Generalization of Multi-Channel Linear Prediction Methods for Blind MIMO Impulse Response Shortening 论文程序的学习</h1>
+<h2 id="算法概况"><a class="markdownIt-Anchor" href="#算法概况"></a> 算法概况</h2>
+<p>1.初始化预测滤波器</p>
+<p>2.计算去混响信号</p>
+<p>3.空间相关矩阵估计</p>
+<p>4.加权样本相关矩阵计算（自相关矩阵R和互相关矩阵r）</p>
+<p>5.更新预测滤波器</p>
+<p>6.返回2直到收敛</p>
+<h2 id="程序概况"><a class="markdownIt-Anchor" href="#程序概况"></a> 程序概况</h2>
+<p>先把音频做多通道傅里叶变换，然后初始化滤波器，音频共有257个采样点。首先对第一个采样点的四个通道的信号分帧，然后求出lambda、R、r、g，此过程需要迭代三次以获得收敛 的预测滤波器。然后利用预测滤波器卷积音频信号得到误差信号计算去混响后的信号。此过程重复257次以获得所有采样点的去混响信号。最后对去混响信号做反傅里叶变换，用重叠相加法把分帧的信号连在一起得到最终的去混响信号。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" data-id="ckv6hiaex000g2cfd4ejoh32s" data-title="GWPE程序学习" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%99%88%E6%99%A8/" rel="tag">陈晨</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第一周周报(葛文昌)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.339Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/">本周学习总结（2021.10.18-10.24）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><em>作者：葛文昌</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<h2 id="1channel-self-adjusting-filtered-x-lms-algorithm-for-active-control-of-vehicle-road-noise学习总结"><a class="markdownIt-Anchor" href="#1channel-self-adjusting-filtered-x-lms-algorithm-for-active-control-of-vehicle-road-noise学习总结"></a> 1.<em>Channel self-adjusting filtered-x LMS algorithm for active control of vehicle road noise学习总结</em></h2>
+<h3 id="文章主体思路"><a class="markdownIt-Anchor" href="#文章主体思路"></a> 文章主体思路</h3>
+<h4 id="arnc系统通常采用多个参考信号由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果-因此该研究采用的csfxlms算法是基于传统fxlms算法在每个参考信号路径中加入自调整参数以最小化参考信号的动态特性影响-利用实测道路噪声响应进行数值仿真结果表明csfxlms算法较传统fxlms算法性能显著提高"><a class="markdownIt-Anchor" href="#arnc系统通常采用多个参考信号由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果-因此该研究采用的csfxlms算法是基于传统fxlms算法在每个参考信号路径中加入自调整参数以最小化参考信号的动态特性影响-利用实测道路噪声响应进行数值仿真结果表明csfxlms算法较传统fxlms算法性能显著提高"></a> ARNC系统通常采用多个参考信号，由于参考信号的动态特性导致系统不足以在较宽频率范围内产生良好降噪效果。因此该研究采用的CSFxLMS算法是基于传统FxLMS算法在每个参考信号路径中加入自调整参数以最小化参考信号的动态特性影响。利用实测道路噪声响应进行数值仿真，结果表明CSFxLMS算法较传统FxLMS算法性能显著提高。</h4>
+<h3 id="文章结构"><a class="markdownIt-Anchor" href="#文章结构"></a> 文章结构</h3>
+<p>文章总体分为六节：</p>
+<h4 id="第1节通过介绍汽车研究开发中重要指标与降噪目标引出anc系统并简述anc系统的发展"><a class="markdownIt-Anchor" href="#第1节通过介绍汽车研究开发中重要指标与降噪目标引出anc系统并简述anc系统的发展"></a> 第1节通过介绍汽车研究开发中重要指标与降噪目标引出ANC系统，并简述ANC系统的发展。</h4>
+<h4 id="第2节介绍了被测车辆中参考传感器位置和数量的选择-由于arnc系统采用前馈系统结构故需要多个参考信号主要采用了多重相干函数和pca方法"><a class="markdownIt-Anchor" href="#第2节介绍了被测车辆中参考传感器位置和数量的选择-由于arnc系统采用前馈系统结构故需要多个参考信号主要采用了多重相干函数和pca方法"></a> 第2节介绍了被测车辆中参考传感器位置和数量的选择。由于ARNC系统采用前馈系统结构，故需要多个参考信号，主要采用了多重相干函数和PCA方法。</h4>
+<h4 id="第3节详细介绍了csfxlms算法对该算法中的重点λ参数进行介绍并得出该算法的自适应权矢量迭代方程"><a class="markdownIt-Anchor" href="#第3节详细介绍了csfxlms算法对该算法中的重点λ参数进行介绍并得出该算法的自适应权矢量迭代方程"></a> 第3节详细介绍了CSFxLMS算法，对该算法中的重点λ参数进行介绍，并得出该算法的自适应权矢量迭代方程。</h4>
+<h4 id="第4节对csfxlms算法的收敛性进行分析并与传统fxlms算法进行比较得出csfxlms算法采用λ参数可以提高系统的收敛速度"><a class="markdownIt-Anchor" href="#第4节对csfxlms算法的收敛性进行分析并与传统fxlms算法进行比较得出csfxlms算法采用λ参数可以提高系统的收敛速度"></a> 第4节对CSFxLMS算法的收敛性进行分析，并与传统FxLMS算法进行比较得出CSFxLMS算法采用λ参数可以提高系统的收敛速度。</h4>
+<h4 id="第5节对csfxlms算法计算复杂度进行分析得出该算法和传统fxlms算法具有相似的计算成本"><a class="markdownIt-Anchor" href="#第5节对csfxlms算法计算复杂度进行分析得出该算法和传统fxlms算法具有相似的计算成本"></a> 第5节对CSFxLMS算法计算复杂度进行分析，得出该算法和传统FxLMS算法具有相似的计算成本。</h4>
+<h4 id="第6节利用实测车辆道路噪声数据进行数值仿真结果表明提出的csfxlms算法具有更好的降噪效果"><a class="markdownIt-Anchor" href="#第6节利用实测车辆道路噪声数据进行数值仿真结果表明提出的csfxlms算法具有更好的降噪效果"></a> 第6节利用实测车辆道路噪声数据进行数值仿真，结果表明提出的CSFxLMS算法具有更好的降噪效果。</h4>
+<h4 id="第7节给出文章结论并予以总结"><a class="markdownIt-Anchor" href="#第7节给出文章结论并予以总结"></a> 第7节给出文章结论并予以总结。</h4>
+<h3 id="学习目标"><a class="markdownIt-Anchor" href="#学习目标"></a> 学习目标</h3>
+<h4 id="本文提出的csfxlms算法中的创新点值得深入思考-对于传统fxlms算法原理需要深度理解-需要对算法matlab程序需要进行深度学习"><a class="markdownIt-Anchor" href="#本文提出的csfxlms算法中的创新点值得深入思考-对于传统fxlms算法原理需要深度理解-需要对算法matlab程序需要进行深度学习"></a> 本文提出的CSFxLMS算法中的创新点值得深入思考。对于传统FxLMS算法原理需要深度理解。需要对算法MATLAB程序需要进行深度学习。</h4>
+<h2 id="2有源噪声控制学习总结"><a class="markdownIt-Anchor" href="#2有源噪声控制学习总结"></a> <em>2.有源噪声控制学习总结</em></h2>
+<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
+<h4 id="传统噪声控制采用无源噪声控制方法包括吸声-隔声和消声器-传统降噪方法降噪效果较差且缺点较多为此有源噪声控制得以提出和发展-有源噪声控制思想是通过人为产生一个用于抵消初级噪声的信号-进一步提出了自适应有源噪声控制系统能够根据监测信号不断地调整控制器参数从而实时改变控制器输出达到持续良好的降噪效果"><a class="markdownIt-Anchor" href="#传统噪声控制采用无源噪声控制方法包括吸声-隔声和消声器-传统降噪方法降噪效果较差且缺点较多为此有源噪声控制得以提出和发展-有源噪声控制思想是通过人为产生一个用于抵消初级噪声的信号-进一步提出了自适应有源噪声控制系统能够根据监测信号不断地调整控制器参数从而实时改变控制器输出达到持续良好的降噪效果"></a> 传统噪声控制采用“无源”噪声控制方法包括吸声、隔声和消声器。传统降噪方法降噪效果较差且缺点较多，为此有源噪声控制得以提出和发展。有源噪声控制思想是通过人为产生一个用于抵消初级噪声的信号。进一步提出了自适应有源噪声控制系统，能够根据监测信号不断地调整控制器参数，从而实时改变控制器输出达到持续良好的降噪效果。</h4>
+<h3 id="lms算法"><a class="markdownIt-Anchor" href="#lms算法"></a> LMS算法</h3>
+<h4 id="维纳滤波输入xnsnvn式中sn表示信号真值vn表示噪声-输出yn等于sn的估计值hatsn-维纳滤波能使sn与hatsn之间均方误差最小即jnee2n最小-jn为目标函数"><a class="markdownIt-Anchor" href="#维纳滤波输入xnsnvn式中sn表示信号真值vn表示噪声-输出yn等于sn的估计值hatsn-维纳滤波能使sn与hatsn之间均方误差最小即jnee2n最小-jn为目标函数"></a> 维纳滤波输入x(n)=s(n)+v(n)，式中：s(n)表示信号真值，v(n)表示噪声。输出y(n)等于s(n)的估计值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>s</mi></mrow><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat{s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">s</span></span></span><span style="top:0em;margin-left:0.11112em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>(n)。维纳滤波能使s(n)与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>s</mi></mrow><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat{s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">s</span></span></span><span style="top:0em;margin-left:0.11112em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>(n)之间均方误差最小即：J(n)=E[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>e</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">e^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>(n)]最小。J(n)为目标函数。</h4>
+<h4 id="自适应滤波器可以自动调节它的脉冲响应以满足均方误差最小准则-自适应过程就是连续不断地调节滤波器权系数以得到最佳权矢量w"><a class="markdownIt-Anchor" href="#自适应滤波器可以自动调节它的脉冲响应以满足均方误差最小准则-自适应过程就是连续不断地调节滤波器权系数以得到最佳权矢量w"></a> 自适应滤波器可以自动调节它的脉冲响应以满足均方误差最小准则。自适应过程就是连续不断地调节滤波器权系数以得到最佳权矢量W。</h4>
+<h4 id="lms算法就是求w采用最陡下降法原理得到权矢量迭代方程"><a class="markdownIt-Anchor" href="#lms算法就是求w采用最陡下降法原理得到权矢量迭代方程"></a> LMS算法就是求W，采用最陡下降法原理得到权矢量迭代方程：</h4>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi><mo>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>W</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>+</mo><mn>2</mn><mi>μ</mi><mi>e</mi><mo>(</mo><mi>n</mi><mo>)</mo><mi>X</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">W(n+1)=W(n)+2\mu e(n)X(n)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mord mathit">μ</span><span class="mord mathit">e</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="fxlms算法"><a class="markdownIt-Anchor" href="#fxlms算法"></a> FxLMS算法</h3>
+<h4 id="fxlms算法相较于lms算法基础上加入了一个次级路径-通过横向滤波器结构以及矢量形式推导提出矢量rn即滤波-x信号矢量进而利用最陡下降法原理得出权矢量迭代公式"><a class="markdownIt-Anchor" href="#fxlms算法相较于lms算法基础上加入了一个次级路径-通过横向滤波器结构以及矢量形式推导提出矢量rn即滤波-x信号矢量进而利用最陡下降法原理得出权矢量迭代公式"></a> FxLMS算法相较于LMS算法基础上加入了一个次级路径。通过横向滤波器结构以及矢量形式推导提出矢量r(n)即滤波-x信号矢量，进而利用最陡下降法原理得出权矢量迭代公式：</h4>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi><mo>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>W</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>−</mo><mn>2</mn><mi>μ</mi><mi>e</mi><mo>(</mo><mi>n</mi><mo>)</mo><mi>r</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">W(n+1)=W(n)-2\mu e(n)r(n)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mord mathit">μ</span><span class="mord mathit">e</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" data-id="ckv6hiaes000b2cfd2jth79vg" data-title="本周学习总结（2021.10.18-10.24）" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" rel="tag">葛文昌</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第一周周报(王雷)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.319Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/">NI说明的笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><em>作者：王雷</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<h1 id="1动态信号dynamic-signals"><a class="markdownIt-Anchor" href="#1动态信号dynamic-signals"></a> 1.动态信号Dynamic Signals</h1>
+<p>获取动态信号：（1）数据采集(DAQ)设备系统</p>
+<p>​                              （2）从文件中读取数据</p>
+<p>​                              （3）用生成VI或其他源来模拟数据</p>
+<p>​        声音和振动工具包中的测量和分析VIs不能补偿不准确的数据。因此，应对试验设备和试验程序进行校准，以确保结果准确。一般情况下，测试设备的规格至少要比DUT的规格好10倍。使用可验证和可重复的测试程序以获得准确的结果。</p>
+<p>​       问题：混叠和时间连续性aliasing and time continuity</p>
+<p>​      当动态信号被离散采样时，混叠现象是大于奈奎斯特频率的频率成分被错误地移到更低的频率。当使用NI动态信号采集(DSA)设备采集数据时，在任何采集中都会自动进行混叠保护。DSA设备上的尖锐抗混叠滤波器跟踪采样率并滤除(衰减)所有高于奈奎斯特频率的频率。</p>
+<p>​       消除混叠：（1）提高采样率</p>
+<p>​                          （2）应用外部低通滤波器</p>
+<p>​                          （3）使用固有的带宽限制的DUT</p>
+<p>​      信号通常是根据时域表达式产生的，因此，高频成分在离散采样数据中是混叠的。保护数据不发生混叠的唯一方法是在数据生成或获取之前应用适当的混叠保护。</p>
+<h1 id="2缩放和校准scaling-and-calibration"><a class="markdownIt-Anchor" href="#2缩放和校准scaling-and-calibration"></a> 2.缩放和校准Scaling and Calibration</h1>
+<p>engineering units (EU) 工程单位</p>
+<p>缩放到工程单位(<strong>Scaling to EU</strong>)</p>
+<p>​        在进行任何分析之前，将信号缩放到适当的EU。</p>
+<p>​        如果使用声音和振动工具包之外的任何方法对波形进行缩放，不能使用SVL Scale V电压对EU VI进行缩放。</p>
+<p>执行系统校准(<strong>Performing System Calibration</strong>)</p>
+<p>​        使用专用的校准器进行系统校准，所有校准VIs使用校准器的特性。</p>
+<p>传播延迟校准(<strong>Propagation Delay Calibration</strong>)</p>
+<p>​       确定DSA设备的传播延迟：group delay，SVL Measure Propagation Delay VIs（SVL测量传播延迟VI）</p>
+<p>​      在测量DAQ设备的传播延迟时，不能将DUT放在信号路径中。并非所有DSA设备在整个支持的采样率范围内都具有恒定的传播延迟。</p>
+<p>​      消除由于数据采集系统的延迟的影响，有两个原因。首先，即使输出和输入通道是硬件同步的，在产生的输出信号和设备上获得的输入信号之间也总是存在延迟。其次，设备的抗成像和抗混叠滤波器引入了额外的延迟。</p>
+<h1 id="3极限测试分析limit-testing-analysis"><a class="markdownIt-Anchor" href="#3极限测试分析limit-testing-analysis"></a> 3.极限测试分析Limit Testing Analysis</h1>
+<p>​      使用SVT极限测试VI对声音和振动工具包产生的任何类型的测量结果进行分析：波形 光谱 倍频程谱  功率谱峰 扫频</p>
+<p>​      必须至少输入一个限制，否则SVT限制测试VI将返回错误。</p>
+<h1 id="4加权滤波器weighting-filters"><a class="markdownIt-Anchor" href="#4加权滤波器weighting-filters"></a> 4.加权滤波器Weighting Filters</h1>
+<p>加权滤波器的用途：在许多涉及声学测量的应用中，最终传感器是人耳。换句话说，声学测量通常试图描述人耳对声音的主观感知。由于仪器设备通常是用来提供</p>
+<p>​                                  线性响应的，而耳朵是非线性传感器，因此使用特殊的滤波器，即所谓的加权滤波器，来解释这些非线性。</p>
+<p>噪声计加权滤波器(Psophometric Weighting Filters</p>
+<p>​       A-加权是一种高通滤波器，旨在模拟感知低电平音调的响度。A-加权逐渐减弱500hz以下的频率。</p>
+<p>​       B-加权模拟感知中等音量的音量。</p>
+<p>​       C-加权去除20 Hz至20 kHz音频范围之外的声音，并模拟高级音调的响度。</p>
+<p>无线电通信权重过滤器Radiocommunications Weighting Filters</p>
+<p>​       <strong>ITU-R 468-4和Dolby加权滤波器</strong>是带通滤波器，用于强调对通常与音频电缆耦合的脉冲噪声类型的响应。通常，这些滤波器用于测量广播、录音系统和声音程序电路中的音频频率噪声。</p>
+<p>电信加权滤波器Telecommunications Weighting Filters</p>
+<p>应用加权滤波器Applying Weighting Filters</p>
+<p>​        NI建议使用固定速率加权滤波器VIs，优势在于在整个频率范围内符合适当的标准，由于预先计算的滤波系数，执行速度略快。</p>
+<h1 id="5integration"><a class="markdownIt-Anchor" href="#5integration"></a> 5.Integration</h1>
+<p>​        在频域，可以定义任意的带限波形为正弦信号的和。由于幅值和相位关系是已知的正弦波，所以可以在频域进行积分。</p>
+<p>直流分量DC Component：直流分量的存在表明被测部件沿传感器轴有净加速度。对于一个典型的振动测量，DUT是安装或悬挂在测试设置。DUT的净加速度为</p>
+<p>​                                               零。因此，在测量的加速度中任何直流分量都是一个伪因素，应该被忽略。</p>
+<p>Transducers：当对信号进行积分时，由于积分对低频分量的衰减小于对高频分量的衰减，不准确测量的低频振动可能会主导响应。</p>
+<h5 id="时域积分"><a class="markdownIt-Anchor" href="#时域积分"></a> 时域积分</h5>
+<p>时域积分更常见的情况是连续采集。</p>
+<p>单积分滤波器在9.2 kHz时的衰减为-95 dB，双积分滤波器在6.6 kHz时的衰减为-185 dB。高频的准确性通常不是问题。</p>
+<h5 id="频域积分"><a class="markdownIt-Anchor" href="#频域积分"></a> 频域积分</h5>
+<p>获取信号频谱：在计算频谱之前，先在时域进行积分；在频域积分之前，先计算频谱。</p>
+<h1 id="6振动水平测量"><a class="markdownIt-Anchor" href="#6振动水平测量"></a> 6.振动水平测量</h1>
+<p>Measuring the Root Mean Square (Root Mean Square,RMS) Level</p>
+<p>​       振动测量的一个基本要求是测量加速度计返回的信号的水平。加速度计信号的水平通常用均方根加速度(grms)表示。</p>
+<p>Performing a Running RMS Level Measurement:SVT运行RMS Level VI返回在最近N秒内计算的RMS值，这是集成时间。</p>
+<p>Computing the Peak Level计算峰值水平:使用SVT峰值电平VI来计算信号的峰值电平。</p>
+<p>Computing the Crest Factor计算波峰因子</p>
+<h1 id="7声级测量sound-level-measurements"><a class="markdownIt-Anchor" href="#7声级测量sound-level-measurements"></a> 7.声级测量Sound-Level Measurements</h1>
+<p>时间平均模式Time Averaging Modes</p>
+<p>Linear线性，Exponential指数，Peak hold峰值保持</p>
+<p>线性平均Linear Averaging：算Leq的方法是在一个固定的时间间隔内对信号的平方进行积分然后除以时间间隔。</p>
+<p>指数平均法Exponential Averaging：指数平均是一个连续的平均过程，它以不同的方式对当前和过去的数据进行加权。与当前数据相</p>
+<p>​                                                               比，过去数据的权重取决于指数时间常数。在指数平均中，平均过程无限期地继续。</p>
+<p>在峰值保持平均中，计算并返回所有先前值中的最大测量声压级值，直到新值超过当前最大值。</p>
+<h1 id="8分数倍频程分析fractional-octave-analysis"><a class="markdownIt-Anchor" href="#8分数倍频程分析fractional-octave-analysis"></a> 8.分数倍频程分析Fractional-Octave Analysis</h1>
+<p>分数倍频程分析是分析音频和声学信号的一种广泛使用的技术。分数倍频程分析，特别是1/3和1/12倍频程，显示出与人耳反应类似的特征。</p>
+<p>使用倍频程分析调色板上的倍频程分析VIs执行以下分析：</p>
+<ul>
+<li>全倍频程</li>
+<li>1/3倍频程</li>
+<li>分数倍频程，包括1/1、1/3、1/6、1/12和1/24倍频程</li>
+</ul>
+<p>倍频程分析VIs可以适应任何采样频率和任意大小的分数倍频程带。</p>
+<p>分数倍频程测量：1.通过N个带通滤波器组发送时域信号。</p>
+<p>​                               2.计算N个滤波器输出的瞬时平方值。</p>
+<p>​                               3.根据选定的平均模式平均瞬时平方值。</p>
+<p>​                               4.在条形图中显示平均值。</p>
+<p>带宽和滤波器组</p>
+<p>倍频程滤波器The Octave Filter：倍频程定义为两个频率之间的间隔，其中一个频率是另一个频率的两倍。</p>
+<p>带边频率Bandedge Frequencies：质量常数Q定义为带宽与滤波器中心频率之比。对于倍频程滤波器，Q在所有倍频程频带上保持不变。</p>
+<p>分数倍频程滤波器Fractional-Octave Filters:频程滤波器分辨率有限，因为在16 Hz–16  kHz范围内只有11个倍频程。为了克服倍频程滤波</p>
+<p>​                                                                           器分辨率的限制，可以使用其他称为分数倍频程滤波器的滤波器。为了提高分辨率，每个倍</p>
+<p>​                                                                           频程使用N个滤波器，而不是用单个滤波器覆盖一个倍频程。在分数倍频程滤波器中，第三倍</p>
+<p>​                                                                           频程（1/3）滤波器广泛用于分数倍频程分析。</p>
+<p>滤波器沉降时间Filter Settling Time:当启动或重置分数倍频程滤波器的滤波操作时，在测量有效之前需要一定的时间。该时间称为稳定时</p>
+<p>​                                                             间，与任何特定滤波器的带宽有关。最低的频带具有最小的带宽，并且定义了在考虑完整的分数倍频</p>
+<p>​                                                             程测量有效之前所需的稳定时间。在Sound  and Vibration Toolkit中，稳定时间定义为5除以用于最</p>
+<p>​                                                             低频带的滤波器带宽。一旦所有筛选器都已结算，筛选器结算指示器将返回TRUE。</p>
+<h1 id="9频率分析frequency-analysis"><a class="markdownIt-Anchor" href="#9频率分析frequency-analysis"></a> 9.频率分析Frequency Analysis</h1>
+<p>FFT:FFT将时间波形分解为正弦分量。FFT获取一块时域数据并返回该数据的频谱。FFT是傅里叶变换的数字实现。因此，FFT不会产生连续</p>
+<p>​       频谱。相反，FFT返回离散频谱，其中波形的频率内容被分解为有限数量的频率线或单元。</p>
+<p>提高频率分辨率Increasing Frequency Resolution</p>
+<p>​       提高频率分辨率有助于区分两个相邻的单独音调。</p>
+<p>实现更高的频率分辨率:  降低采样频率fs。减小fs通常是不实际的，因为减小fs会减小频率范围;</p>
+<p>​                                         增加样本数量N。增加N会在原始频率范围内产生更多的线。</p>
+<p>选带傅里叶变换(<strong>Zoom FFT</strong>)分析</p>
+<p>细化FFT分析比基带FFT获得了更精细的频率分辨率。Zoom FFT VI获取多个数据块和降采样(downsamples)以模拟较低的采样频率。块的大小与可实现的频率分辨率无关，因为Zoom FFT VI会积累被抽取的数据，直到获得所需的点数。因为变换是对一组抽取的数据进行操作，所以只需要计算一个相对较小的频谱。</p>
+<p>Zoom FFT VIs按照以下步骤处理采样数据：</p>
+<ol>
+<li>调制采集的数据，使分析频带处于0频率。</li>
+<li>在时域内过滤调制数据，隔离分析波段，防止在较低采样频率下重新采样时混叠。</li>
+<li>抽取滤波后的数据，以降低有效采样频率。</li>
+<li>累计抽取的数据，直到有足够的样本来计算频谱。</li>
+<li>使用离散Zak变换(DZT)来有效地计算所需的光谱线。</li>
+<li>解调或移位计算出的频谱。</li>
+</ol>
+<p>获得更高频率分辨率的唯一方法是增加时间记录的长度。</p>
+<p>​        基带FFT、基带子集和缩放FFT  VIs在输入信号和计算频谱之间具有相同的基本关系。对于基带和子集分析，仅通过增加块大小即可获得更高的频率分辨率。增加块大小会导致使用更多行计算FFT。</p>
+<p>​        FFT频谱计算输入信号频谱的幅度和相位或实部和虚部。根据选择的平均模式保留相位信息。这种测量最常用于需要幅值和相位信息的更高级测量。</p>
+<p>单通道测量</p>
+<p>双通道测量</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" data-id="ckv6hiaeq000a2cfdax5y7ahd" data-title="NI说明的笔记" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%8B%E9%9B%B7/" rel="tag">王雷</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第一周周报(王绍博)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.315Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/">自适应信号处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>作者：王绍博</p>
+<p><em>日期：2021年10月24日</em></p>
+<p>牛顿法、梯度下降法、LMS算法的推导。（不能插入图片，笔记本上）</p>
+<p>梯度下降法的缺点</p>
+<p>1靠近极小值时收敛速度减慢</p>
+<p>2可能会“之字形”地下降震荡</p>
+<p>牛顿法的缺点</p>
+<p>1牛顿法是一种迭代算法，每一步都需要求解一次二次的导数，计算比较复杂。</p>
+<p>LMS算法是不需要统计概率，只要用瞬时值代入计算。</p>
+<p>P109  为了要使下降方向趋向性能表面的W*，它们在每次迭代时都需要对梯度进行估值，但是梯度估值是不正确的，里面含有噪声。</p>
+<p>期望、方差、协方差的计算。</p>
+<p>奇分频 偶分频 IP核调用。vivado约束文件的编写 、matlab学习。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/" data-id="ckv6hiael00082cfd8vy95dpm" data-title="自适应信号处理" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" rel="tag">王绍博</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第一周周报(孙帅恒)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/" class="article-date">
   <time class="dt-published" datetime="2021-10-22T11:34:25.908Z" itemprop="datePublished">2021-10-22</time>
 </a>
     
@@ -93,7 +505,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/">LabVIEW声音和振动工具包学习</a>
+      <a class="p-name article-title" href="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/">LabVIEW声音和振动工具包学习</a>
     </h1>
   
 
@@ -103,6 +515,7 @@
       
         <p><em>作者：孙帅恒</em></p>
 <p><em>日期：2021年10月22日</em></p>
+<h1 id="labview声音和振动工具包简要总结"><a class="markdownIt-Anchor" href="#labview声音和振动工具包简要总结"></a> LabVIEW声音和振动工具包简要总结</h1>
 <h2 id="1-引言"><a class="markdownIt-Anchor" href="#1-引言"></a> 1. 引言</h2>
 <ul>
 <li>将信号缩放到工程单位（EU）</li>
@@ -119,7 +532,7 @@
 <li>执行失真分析</li>
 <li>显示结果</li>
 </ul>
-<p><img src="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85%E6%A6%82%E8%BF%B0.png" alt="声音和振动工具包概述"></p>
+<p><img src="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85%E6%A6%82%E8%BF%B0.png" alt="声音和振动工具包概述"></p>
 <ul>
 <li>
 <p><strong>Scaling</strong></p>
@@ -225,14 +638,14 @@
 <p>中波波段（中音）160 Hz～2500 Hz（4个倍波段）</p>
 <p>短波波段（高音）2500 Hz～20000 Hz（3个倍波段）</p>
 <p>这些滤波器的频率响应根据ANSI S1.4标准。下图显示了定义的相对衰减A-、B-和C-加权滤波器：</p>
-<p><img src="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8.png" alt="加权滤波器"></p>
+<p><img src="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8.png" alt="加权滤波器"></p>
 <h4 id="无线电通信加权滤波器radiocommunications-weighting-filters"><a class="markdownIt-Anchor" href="#无线电通信加权滤波器radiocommunications-weighting-filters"></a> 无线电通信加权滤波器(<strong>Radiocommunications Weighting Filters</strong>)</h4>
 <p><strong>ITU-R 468-4和Dolby加权滤波器</strong>是带通滤波器，用于强调对通常与音频电缆耦合的脉冲噪声类型的响应。通常，这些滤波器用于测量广播、录音系统和声音程序电路中的音频频率噪声。</p>
 <p>下图为ITU-R 468-4和Dolby加权滤波器的相对衰减曲线。</p>
-<p><img src="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E6%97%A0%E7%BA%BF%E7%94%B5%E9%80%9A%E4%BF%A1%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%A1%B0%E5%87%8F.png" alt="无线电通信加权滤波器的相对衰减"></p>
+<p><img src="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/%E6%97%A0%E7%BA%BF%E7%94%B5%E9%80%9A%E4%BF%A1%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%A1%B0%E5%87%8F.png" alt="无线电通信加权滤波器的相对衰减"></p>
 <h4 id="电信加权滤波器telecommunications-weighting-filters"><a class="markdownIt-Anchor" href="#电信加权滤波器telecommunications-weighting-filters"></a> 电信加权滤波器(<strong>Telecommunications Weighting Filters</strong>)</h4>
 <p><strong>CCITT和C-message加权滤波器</strong>是用于测量电话电路上的音频噪声的带通滤波器。CCITT（ITU-T）滤波器用于国际电话电路。 C-message滤波器通常用于北美的电话电路。</p>
-<p><img src="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E7%94%B5%E4%BF%A1%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%A1%B0%E5%87%8F.png" alt="电信加权滤波器的相对衰减"></p>
+<p><img src="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/%E7%94%B5%E4%BF%A1%E5%8A%A0%E6%9D%83%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%A1%B0%E5%87%8F.png" alt="电信加权滤波器的相对衰减"></p>
 <h3 id="应用加权滤波器applying-weighting-filters"><a class="markdownIt-Anchor" href="#应用加权滤波器applying-weighting-filters"></a> 应用加权滤波器(<strong>Applying Weighting Filters</strong>)</h3>
 <h4 id="对时域数据应用加权"><a class="markdownIt-Anchor" href="#对时域数据应用加权"></a> 对时域数据应用加权</h4>
 <p>使用“加权”选项板上的加权VIs将加权应用于时域信号。这些vi使用预先设计的滤波器来应用所需的psophometric 加权。预先设计的滤波器性质意味着它们只支持有限的样本率集。表5-1列出了具体的受支持的样本率。</p>
@@ -297,7 +710,7 @@
 </ul>
 <h4 id="线性平均linear-averaging"><a class="markdownIt-Anchor" href="#线性平均linear-averaging"></a> 线性平均(<strong>Linear Averaging</strong>)</h4>
 <p>通过将固定时间区间内的信号平方积分，再除以时间区间计算Leq。当您选择线性平均时，声级VIs将返回单个值。返回的值表示在与实际噪声历史相同的时间T内产生相同声能的连续分贝水平。要获得中间结果，必须将长时间记录分成几个较小的记录。线性平均用以下方程表示。</p>
-<p><img src="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/Leq%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F.png" alt="Leq计算公式"></p>
+<p><img src="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/Leq%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F.png" alt="Leq计算公式"></p>
 <p>其中Po为声学参考压力，值为20µPa。</p>
 <h4 id="指数平均exponential-averaging"><a class="markdownIt-Anchor" href="#指数平均exponential-averaging"></a> <strong>指数平均(Exponential Averaging)</strong></h4>
 <p>指数平均是一个连续的平均过程，它对当前和过去的数据的权重不同。与当前数据相比，过去数据的权重取决于指数时间常数。在指数平均中，平均过程会无限期地继续下去。</p>
@@ -323,7 +736,7 @@
 <h3 id="带宽和滤波器组"><a class="markdownIt-Anchor" href="#带宽和滤波器组"></a> 带宽和滤波器组</h3>
 <h4 id="倍频程滤波器the-octave-filter"><a class="markdownIt-Anchor" href="#倍频程滤波器the-octave-filter"></a> 倍频程滤波器(<strong>The Octave Filter</strong>)</h4>
 <p>倍频程定义为两个频率之间的间隔，其中一个是另一个频率的两倍。例如，250 Hz和500 Hz的频率间隔一个八度，1 kHz和2 kHz也是如此。图9-4显示了一个倍频程滤波器，一个通带覆盖一个八度的滤波器。</p>
-<p><img src="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/%E5%80%8D%E9%A2%91%E7%A8%8B%E6%BB%A4%E6%B3%A2%E5%99%A8%EF%BC%88%E5%88%86%E6%9E%90%E5%A4%8D%E5%90%88%E5%A3%B0%E5%92%8C%E5%99%AA%E5%A3%B0%E9%A2%91%E8%B0%B1%E8%83%BD%E7%9A%84%E5%90%AB%E9%87%8F%EF%BC%89.png" alt="倍频程滤波器（分析复合声和噪声频谱能的含量）"></p>
+<p><img src="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/%E5%80%8D%E9%A2%91%E7%A8%8B%E6%BB%A4%E6%B3%A2%E5%99%A8%EF%BC%88%E5%88%86%E6%9E%90%E5%A4%8D%E5%90%88%E5%A3%B0%E5%92%8C%E5%99%AA%E5%A3%B0%E9%A2%91%E8%B0%B1%E8%83%BD%E7%9A%84%E5%90%AB%E9%87%8F%EF%BC%89.png" alt="倍频程滤波器（分析复合声和噪声频谱能的含量）"></p>
 <p>就像音叉为音乐家提供了一个440 Hz的参考频率一样，完全定义倍频程滤波器也需要一个参考频率来完全定义。仪器设备通常使用1 kHz的参考频率。</p>
 <h4 id="边带频率bandedge-frequencies"><a class="markdownIt-Anchor" href="#边带频率bandedge-frequencies"></a> 边带频率(<strong>Bandedge Frequencies</strong>)</h4>
 <p>质量常数Q定义为带宽与滤波器中心频率的比值。对于倍频程滤波器的所有倍频带，Q保持不变。例如，中心频率为1000 Hz的倍频程滤波器会导致以下带边频率：</p>
@@ -399,11 +812,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/" data-id="ckv2en16k0005acfd9zp17qje" data-title="LabVIEW声音和振动工具包学习" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/" data-id="ckv6hiaee00052cfdev3o05h3" data-title="LabVIEW声音和振动工具包学习" class="article-share-link">分享</a>
       
       
-        <a href="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/#comments" class="article-comment-link">
-          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/" itemprop="commentCount"></span>
+        <a href="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/22/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E5%B8%85%E6%81%92)/" itemprop="commentCount"></span>
           留言
         </a>
       
@@ -453,22 +866,22 @@
 </li>
 <li>
 <p>命令行查看安装版本</p>
-<p><code>node -v</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>安装cnpm包管理工具提高下载速度</p>
-<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="02-安装hexo"><a class="markdownIt-Anchor" href="#02-安装hexo"></a> 02、安装hexo</h3>
 <ul>
 <li>
 <p>命令行下安装</p>
-<p><code>cnpm install -g hexo-cli</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>验证是否安装成功<br>
-<code>hexo -v</code></p>
+<p>验证是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="03-安装-git"><a class="markdownIt-Anchor" href="#03-安装-git"></a> 03、安装 Git</h3>
@@ -477,8 +890,7 @@
 <p>官网下载安装</p>
 <p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 <p>在命令行输入：</p>
-<p><code>git config --global user.name &quot;用户名&quot;</code></p>
-<p><code>git config --global user.email &quot;邮箱&quot;</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;邮箱&quot;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="2-部署博客"><a class="markdownIt-Anchor" href="#2-部署博客"></a> 2. 部署博客</h2>
@@ -486,26 +898,29 @@
 <ul>
 <li>
 <p>创建博客文件夹</p>
-<p>在要放置博客文件的路径下，初始化一个博客：<code>hexo init blog</code>，并命名为blog，此时当前路径下会生成一个blog文件夹。</p>
+<p>在要放置博客文件的路径下，初始化一个博客并命名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>此时当前路径下会生成一个文件名为blog的文件夹。</p>
 </li>
 <li>
 <p>生成博客</p>
 <p>编写Markdown格式的文本，放在<code>blog\source\_posts</code>路径下</p>
-<p>让hexo框架自动渲染生成博客：<code>hexo g</code></p>
+<p>让hexo框架自动渲染生成博客：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>在本地服务器上运行博客：<code>hexo s</code></p>
-<p><code>ctrl+c</code>退出</p>
-<p>部署成功后，可以在本机浏览器输入<code>localhost:4000</code>，预览效果</p>
+<p>在本地服务器上运行博客：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>部署成功后，可以在本机浏览器输入<code>localhost:4000</code>，预览效果。命令行下<code>ctrl+c</code>可以关闭服务并退出。</p>
 <p>可以在执行时使用 <code>-p</code> 选项指定其他端口，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="02-远程部署在github上"><a class="markdownIt-Anchor" href="#02-远程部署在github上"></a> 02、远程部署在GitHub上</h3>
 <ul>
 <li>
 <p>安装git部署工具</p>
-<p><code>cnpm install hexo-deployer-git --save</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>创建GitHub仓库</p>
@@ -520,7 +935,7 @@
 </li>
 <li>
 <p>部署到github</p>
-<p><code>hexo g</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>部署成功后可以访问https://sally-wow.github.io/</p>
 </li>
 </ul>
@@ -533,10 +948,6 @@
 </li>
 <li>
 <p>生成网站静态文件到默认设置的 public 文件夹。</p>
-<ul>
-<li>便于查看网站生成的静态文件或者手动部署网站；</li>
-<li>如果使用自动部署，不需要先执行该命令；</li>
-</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 </li>
 <li>
@@ -548,7 +959,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/17/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckv2en1690001acfdbq23b73r" data-title="Windows下使用hexo+github搭建个人博客" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/10/17/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckv6hiae000012cfdbxymbgb3" data-title="Windows下使用hexo+github搭建个人博客" class="article-share-link">分享</a>
       
       
         <a href="/2021/10/17/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#comments" class="article-comment-link">
@@ -598,33 +1009,34 @@
 </li>
 <li>
 <p>clone远程仓库到本地 ：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:username/username.github.io.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:username/username.github.io.git</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>根据<code>packge.json</code>安装依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>本地生成网站并开启博客服务器：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>此时在浏览器输入<code>localhost:4000</code>，就可以看到博客正常运行。</p>
 </li>
 </ol>
 <h2 id="2-同步博客"><a class="markdownIt-Anchor" href="#2-同步博客"></a> 2. 同步博客</h2>
 <ol>
 <li>
-<p><code>git pull</code>从远程仓库的hexo分支拉取最新的Hexo环境到本地，</p>
+<p>从远程仓库的hexo分支拉取最新的Hexo环境到本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>文章写完，要发布时，需要先提交环境文件，再发布文章。按以下顺序执行命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;some descrption&quot;</span><br><span class="line">git push origin hexo</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;some descrption&quot;</span></span><br><span class="line">git push origin hexo</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/" data-id="ckv2en16f0003acfd8oyq9rlw" data-title="跨设备同步博客" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/" data-id="ckv6hiae700032cfd8x9y44bs" data-title="跨设备同步博客" class="article-share-link">分享</a>
       
       
         <a href="/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/#comments" class="article-comment-link">
@@ -661,7 +1073,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" rel="tag">孙帅恒</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" rel="tag">孙帅恒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" rel="tag">孙芯年</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" rel="tag">王绍博</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%9B%B7/" rel="tag">王雷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" rel="tag">葛文昌</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%88%E6%99%A8/" rel="tag">陈晨</a></li></ul>
     </div>
   </div>
 
@@ -671,7 +1083,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" style="font-size: 10px;">孙帅恒</a>
+      <a href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" style="font-size: 10px;">孙帅恒</a> <a href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" style="font-size: 10px;">孙芯年</a> <a href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" style="font-size: 10px;">王绍博</a> <a href="/tags/%E7%8E%8B%E9%9B%B7/" style="font-size: 10px;">王雷</a> <a href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" style="font-size: 10px;">葛文昌</a> <a href="/tags/%E9%99%88%E6%99%A8/" style="font-size: 10px;">陈晨</a>
     </div>
   </div>
 
@@ -693,15 +1105,23 @@
       <ul>
         
           <li>
-            <a href="/2021/10/22/%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%E5%8C%85/">LabVIEW声音和振动工具包学习</a>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/">音频数据采集和PEAQ的matlab信号测试</a>
           </li>
         
           <li>
-            <a href="/2021/10/17/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Windows下使用hexo+github搭建个人博客</a>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/">GWPE程序学习</a>
           </li>
         
           <li>
-            <a href="/2021/10/17/hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/">跨设备同步博客</a>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/">本周学习总结（2021.10.18-10.24）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/">NI说明的笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/">自适应信号处理</a>
           </li>
         
       </ul>

@@ -4,17 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>tags | C404</title>
+  <title>GWPE程序学习 | C404</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  <meta name="description" content="作者：陈晨 日期：2021年10月24日  Generalization of Multi-Channel Linear Prediction Methods for Blind MIMO Impulse Response Shortening 论文程序的学习  算法概况 1.初始化预测滤波器 2.计算去混响信号 3.空间相关矩阵估计 4.加权样本相关矩阵计算（自相关矩阵R和互相关矩阵r） 5.更">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GWPE程序学习">
+<meta property="og:url" content="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/index.html">
 <meta property="og:site_name" content="C404">
+<meta property="og:description" content="作者：陈晨 日期：2021年10月24日  Generalization of Multi-Channel Linear Prediction Methods for Blind MIMO Impulse Response Shortening 论文程序的学习  算法概况 1.初始化预测滤波器 2.计算去混响信号 3.空间相关矩阵估计 4.加权样本相关矩阵计算（自相关矩阵R和互相关矩阵r） 5.更">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-10-17T08:30:29.000Z">
-<meta property="article:modified_time" content="2021-10-25T05:37:45.000Z">
+<meta property="article:published_time" content="2021-10-25T09:31:08.350Z">
+<meta property="article:modified_time" content="2021-10-25T09:39:18.971Z">
 <meta property="article:author" content="Sun">
-<meta property="article:tag" content="周报">
+<meta property="article:tag" content="陈晨">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="C404" type="application/atom+xml">
@@ -75,12 +77,16 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-第一周周报(陈晨)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/tags/index.html" class="article-date">
-  <time class="dt-published" datetime="2021-10-17T08:30:29.000Z" itemprop="datePublished">2021-10-17</time>
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.350Z" itemprop="datePublished">2021-10-25</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -89,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      tags
+      GWPE程序学习
     </h1>
   
 
@@ -97,23 +103,56 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p><em>作者：陈晨</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<h1 id="generalization-of-multi-channel-linear-prediction-methods-for-blind-mimo-impulse-response-shortening-论文程序的学习"><a class="markdownIt-Anchor" href="#generalization-of-multi-channel-linear-prediction-methods-for-blind-mimo-impulse-response-shortening-论文程序的学习"></a> Generalization of Multi-Channel Linear Prediction Methods for Blind MIMO Impulse Response Shortening 论文程序的学习</h1>
+<h2 id="算法概况"><a class="markdownIt-Anchor" href="#算法概况"></a> 算法概况</h2>
+<p>1.初始化预测滤波器</p>
+<p>2.计算去混响信号</p>
+<p>3.空间相关矩阵估计</p>
+<p>4.加权样本相关矩阵计算（自相关矩阵R和互相关矩阵r）</p>
+<p>5.更新预测滤波器</p>
+<p>6.返回2直到收敛</p>
+<h2 id="程序概况"><a class="markdownIt-Anchor" href="#程序概况"></a> 程序概况</h2>
+<p>先把音频做多通道傅里叶变换，然后初始化滤波器，音频共有257个采样点。首先对第一个采样点的四个通道的信号分帧，然后求出lambda、R、r、g，此过程需要迭代三次以获得收敛 的预测滤波器。然后利用预测滤波器卷积音频信号得到误差信号计算去混响后的信号。此过程重复257次以获得所有采样点的去混响信号。最后对去混响信号做反傅里叶变换，用重叠相加法把分帧的信号连在一起得到最终的去混响信号。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/tags/index.html" data-id="ckv6hiae600022cfd5a0p2aew" data-title="tags" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" data-id="ckv6hiaex000g2cfd4ejoh32s" data-title="GWPE程序学习" class="article-share-link">分享</a>
       
       
-        <a href="/tags/index.html#comments" class="article-comment-link">
-          <span class="post-comments-count valine-comment-count" data-xid="/tags/index.html" itemprop="commentCount"></span>
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/" itemprop="commentCount"></span>
           留言
         </a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%99%88%E6%99%A8/" rel="tag">陈晨</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          音频数据采集和PEAQ的matlab信号测试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">本周学习总结（2021.10.18-10.24）</div>
+    </a>
+  
+</nav>
+
   
 </article>
 

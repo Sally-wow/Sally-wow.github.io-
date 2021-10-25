@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>NI说明的笔记 | C404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="作者：王雷 日期：2021年10月24日  1.动态信号Dynamic Signals 获取动态信号：（1）数据采集(DAQ)设备系统 ​                              （2）从文件中读取数据 ​                              （3）用生成VI或其他源来模拟数据 ​        声音和振动工具包中的测量和分析VIs不能补偿不准确的数据。因此">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NI说明的笔记">
+<meta property="og:url" content="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/index.html">
+<meta property="og:site_name" content="C404">
+<meta property="og:description" content="作者：王雷 日期：2021年10月24日  1.动态信号Dynamic Signals 获取动态信号：（1）数据采集(DAQ)设备系统 ​                              （2）从文件中读取数据 ​                              （3）用生成VI或其他源来模拟数据 ​        声音和振动工具包中的测量和分析VIs不能补偿不准确的数据。因此">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-25T09:31:08.319Z">
+<meta property="article:modified_time" content="2021-10-25T09:40:19.618Z">
+<meta property="article:author" content="Sun">
+<meta property="article:tag" content="王雷">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="C404" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+
+  <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">C404</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第一周周报(王雷)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" class="article-date">
+  <time class="dt-published" datetime="2021-10-25T09:31:08.319Z" itemprop="datePublished">2021-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      NI说明的笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><em>作者：王雷</em></p>
+<p><em>日期：2021年10月24日</em></p>
+<h1 id="1动态信号dynamic-signals"><a class="markdownIt-Anchor" href="#1动态信号dynamic-signals"></a> 1.动态信号Dynamic Signals</h1>
+<p>获取动态信号：（1）数据采集(DAQ)设备系统</p>
+<p>​                              （2）从文件中读取数据</p>
+<p>​                              （3）用生成VI或其他源来模拟数据</p>
+<p>​        声音和振动工具包中的测量和分析VIs不能补偿不准确的数据。因此，应对试验设备和试验程序进行校准，以确保结果准确。一般情况下，测试设备的规格至少要比DUT的规格好10倍。使用可验证和可重复的测试程序以获得准确的结果。</p>
+<p>​       问题：混叠和时间连续性aliasing and time continuity</p>
+<p>​      当动态信号被离散采样时，混叠现象是大于奈奎斯特频率的频率成分被错误地移到更低的频率。当使用NI动态信号采集(DSA)设备采集数据时，在任何采集中都会自动进行混叠保护。DSA设备上的尖锐抗混叠滤波器跟踪采样率并滤除(衰减)所有高于奈奎斯特频率的频率。</p>
+<p>​       消除混叠：（1）提高采样率</p>
+<p>​                          （2）应用外部低通滤波器</p>
+<p>​                          （3）使用固有的带宽限制的DUT</p>
+<p>​      信号通常是根据时域表达式产生的，因此，高频成分在离散采样数据中是混叠的。保护数据不发生混叠的唯一方法是在数据生成或获取之前应用适当的混叠保护。</p>
+<h1 id="2缩放和校准scaling-and-calibration"><a class="markdownIt-Anchor" href="#2缩放和校准scaling-and-calibration"></a> 2.缩放和校准Scaling and Calibration</h1>
+<p>engineering units (EU) 工程单位</p>
+<p>缩放到工程单位(<strong>Scaling to EU</strong>)</p>
+<p>​        在进行任何分析之前，将信号缩放到适当的EU。</p>
+<p>​        如果使用声音和振动工具包之外的任何方法对波形进行缩放，不能使用SVL Scale V电压对EU VI进行缩放。</p>
+<p>执行系统校准(<strong>Performing System Calibration</strong>)</p>
+<p>​        使用专用的校准器进行系统校准，所有校准VIs使用校准器的特性。</p>
+<p>传播延迟校准(<strong>Propagation Delay Calibration</strong>)</p>
+<p>​       确定DSA设备的传播延迟：group delay，SVL Measure Propagation Delay VIs（SVL测量传播延迟VI）</p>
+<p>​      在测量DAQ设备的传播延迟时，不能将DUT放在信号路径中。并非所有DSA设备在整个支持的采样率范围内都具有恒定的传播延迟。</p>
+<p>​      消除由于数据采集系统的延迟的影响，有两个原因。首先，即使输出和输入通道是硬件同步的，在产生的输出信号和设备上获得的输入信号之间也总是存在延迟。其次，设备的抗成像和抗混叠滤波器引入了额外的延迟。</p>
+<h1 id="3极限测试分析limit-testing-analysis"><a class="markdownIt-Anchor" href="#3极限测试分析limit-testing-analysis"></a> 3.极限测试分析Limit Testing Analysis</h1>
+<p>​      使用SVT极限测试VI对声音和振动工具包产生的任何类型的测量结果进行分析：波形 光谱 倍频程谱  功率谱峰 扫频</p>
+<p>​      必须至少输入一个限制，否则SVT限制测试VI将返回错误。</p>
+<h1 id="4加权滤波器weighting-filters"><a class="markdownIt-Anchor" href="#4加权滤波器weighting-filters"></a> 4.加权滤波器Weighting Filters</h1>
+<p>加权滤波器的用途：在许多涉及声学测量的应用中，最终传感器是人耳。换句话说，声学测量通常试图描述人耳对声音的主观感知。由于仪器设备通常是用来提供</p>
+<p>​                                  线性响应的，而耳朵是非线性传感器，因此使用特殊的滤波器，即所谓的加权滤波器，来解释这些非线性。</p>
+<p>噪声计加权滤波器(Psophometric Weighting Filters</p>
+<p>​       A-加权是一种高通滤波器，旨在模拟感知低电平音调的响度。A-加权逐渐减弱500hz以下的频率。</p>
+<p>​       B-加权模拟感知中等音量的音量。</p>
+<p>​       C-加权去除20 Hz至20 kHz音频范围之外的声音，并模拟高级音调的响度。</p>
+<p>无线电通信权重过滤器Radiocommunications Weighting Filters</p>
+<p>​       <strong>ITU-R 468-4和Dolby加权滤波器</strong>是带通滤波器，用于强调对通常与音频电缆耦合的脉冲噪声类型的响应。通常，这些滤波器用于测量广播、录音系统和声音程序电路中的音频频率噪声。</p>
+<p>电信加权滤波器Telecommunications Weighting Filters</p>
+<p>应用加权滤波器Applying Weighting Filters</p>
+<p>​        NI建议使用固定速率加权滤波器VIs，优势在于在整个频率范围内符合适当的标准，由于预先计算的滤波系数，执行速度略快。</p>
+<h1 id="5integration"><a class="markdownIt-Anchor" href="#5integration"></a> 5.Integration</h1>
+<p>​        在频域，可以定义任意的带限波形为正弦信号的和。由于幅值和相位关系是已知的正弦波，所以可以在频域进行积分。</p>
+<p>直流分量DC Component：直流分量的存在表明被测部件沿传感器轴有净加速度。对于一个典型的振动测量，DUT是安装或悬挂在测试设置。DUT的净加速度为</p>
+<p>​                                               零。因此，在测量的加速度中任何直流分量都是一个伪因素，应该被忽略。</p>
+<p>Transducers：当对信号进行积分时，由于积分对低频分量的衰减小于对高频分量的衰减，不准确测量的低频振动可能会主导响应。</p>
+<h5 id="时域积分"><a class="markdownIt-Anchor" href="#时域积分"></a> 时域积分</h5>
+<p>时域积分更常见的情况是连续采集。</p>
+<p>单积分滤波器在9.2 kHz时的衰减为-95 dB，双积分滤波器在6.6 kHz时的衰减为-185 dB。高频的准确性通常不是问题。</p>
+<h5 id="频域积分"><a class="markdownIt-Anchor" href="#频域积分"></a> 频域积分</h5>
+<p>获取信号频谱：在计算频谱之前，先在时域进行积分；在频域积分之前，先计算频谱。</p>
+<h1 id="6振动水平测量"><a class="markdownIt-Anchor" href="#6振动水平测量"></a> 6.振动水平测量</h1>
+<p>Measuring the Root Mean Square (Root Mean Square,RMS) Level</p>
+<p>​       振动测量的一个基本要求是测量加速度计返回的信号的水平。加速度计信号的水平通常用均方根加速度(grms)表示。</p>
+<p>Performing a Running RMS Level Measurement:SVT运行RMS Level VI返回在最近N秒内计算的RMS值，这是集成时间。</p>
+<p>Computing the Peak Level计算峰值水平:使用SVT峰值电平VI来计算信号的峰值电平。</p>
+<p>Computing the Crest Factor计算波峰因子</p>
+<h1 id="7声级测量sound-level-measurements"><a class="markdownIt-Anchor" href="#7声级测量sound-level-measurements"></a> 7.声级测量Sound-Level Measurements</h1>
+<p>时间平均模式Time Averaging Modes</p>
+<p>Linear线性，Exponential指数，Peak hold峰值保持</p>
+<p>线性平均Linear Averaging：算Leq的方法是在一个固定的时间间隔内对信号的平方进行积分然后除以时间间隔。</p>
+<p>指数平均法Exponential Averaging：指数平均是一个连续的平均过程，它以不同的方式对当前和过去的数据进行加权。与当前数据相</p>
+<p>​                                                               比，过去数据的权重取决于指数时间常数。在指数平均中，平均过程无限期地继续。</p>
+<p>在峰值保持平均中，计算并返回所有先前值中的最大测量声压级值，直到新值超过当前最大值。</p>
+<h1 id="8分数倍频程分析fractional-octave-analysis"><a class="markdownIt-Anchor" href="#8分数倍频程分析fractional-octave-analysis"></a> 8.分数倍频程分析Fractional-Octave Analysis</h1>
+<p>分数倍频程分析是分析音频和声学信号的一种广泛使用的技术。分数倍频程分析，特别是1/3和1/12倍频程，显示出与人耳反应类似的特征。</p>
+<p>使用倍频程分析调色板上的倍频程分析VIs执行以下分析：</p>
+<ul>
+<li>全倍频程</li>
+<li>1/3倍频程</li>
+<li>分数倍频程，包括1/1、1/3、1/6、1/12和1/24倍频程</li>
+</ul>
+<p>倍频程分析VIs可以适应任何采样频率和任意大小的分数倍频程带。</p>
+<p>分数倍频程测量：1.通过N个带通滤波器组发送时域信号。</p>
+<p>​                               2.计算N个滤波器输出的瞬时平方值。</p>
+<p>​                               3.根据选定的平均模式平均瞬时平方值。</p>
+<p>​                               4.在条形图中显示平均值。</p>
+<p>带宽和滤波器组</p>
+<p>倍频程滤波器The Octave Filter：倍频程定义为两个频率之间的间隔，其中一个频率是另一个频率的两倍。</p>
+<p>带边频率Bandedge Frequencies：质量常数Q定义为带宽与滤波器中心频率之比。对于倍频程滤波器，Q在所有倍频程频带上保持不变。</p>
+<p>分数倍频程滤波器Fractional-Octave Filters:频程滤波器分辨率有限，因为在16 Hz–16  kHz范围内只有11个倍频程。为了克服倍频程滤波</p>
+<p>​                                                                           器分辨率的限制，可以使用其他称为分数倍频程滤波器的滤波器。为了提高分辨率，每个倍</p>
+<p>​                                                                           频程使用N个滤波器，而不是用单个滤波器覆盖一个倍频程。在分数倍频程滤波器中，第三倍</p>
+<p>​                                                                           频程（1/3）滤波器广泛用于分数倍频程分析。</p>
+<p>滤波器沉降时间Filter Settling Time:当启动或重置分数倍频程滤波器的滤波操作时，在测量有效之前需要一定的时间。该时间称为稳定时</p>
+<p>​                                                             间，与任何特定滤波器的带宽有关。最低的频带具有最小的带宽，并且定义了在考虑完整的分数倍频</p>
+<p>​                                                             程测量有效之前所需的稳定时间。在Sound  and Vibration Toolkit中，稳定时间定义为5除以用于最</p>
+<p>​                                                             低频带的滤波器带宽。一旦所有筛选器都已结算，筛选器结算指示器将返回TRUE。</p>
+<h1 id="9频率分析frequency-analysis"><a class="markdownIt-Anchor" href="#9频率分析frequency-analysis"></a> 9.频率分析Frequency Analysis</h1>
+<p>FFT:FFT将时间波形分解为正弦分量。FFT获取一块时域数据并返回该数据的频谱。FFT是傅里叶变换的数字实现。因此，FFT不会产生连续</p>
+<p>​       频谱。相反，FFT返回离散频谱，其中波形的频率内容被分解为有限数量的频率线或单元。</p>
+<p>提高频率分辨率Increasing Frequency Resolution</p>
+<p>​       提高频率分辨率有助于区分两个相邻的单独音调。</p>
+<p>实现更高的频率分辨率:  降低采样频率fs。减小fs通常是不实际的，因为减小fs会减小频率范围;</p>
+<p>​                                         增加样本数量N。增加N会在原始频率范围内产生更多的线。</p>
+<p>选带傅里叶变换(<strong>Zoom FFT</strong>)分析</p>
+<p>细化FFT分析比基带FFT获得了更精细的频率分辨率。Zoom FFT VI获取多个数据块和降采样(downsamples)以模拟较低的采样频率。块的大小与可实现的频率分辨率无关，因为Zoom FFT VI会积累被抽取的数据，直到获得所需的点数。因为变换是对一组抽取的数据进行操作，所以只需要计算一个相对较小的频谱。</p>
+<p>Zoom FFT VIs按照以下步骤处理采样数据：</p>
+<ol>
+<li>调制采集的数据，使分析频带处于0频率。</li>
+<li>在时域内过滤调制数据，隔离分析波段，防止在较低采样频率下重新采样时混叠。</li>
+<li>抽取滤波后的数据，以降低有效采样频率。</li>
+<li>累计抽取的数据，直到有足够的样本来计算频谱。</li>
+<li>使用离散Zak变换(DZT)来有效地计算所需的光谱线。</li>
+<li>解调或移位计算出的频谱。</li>
+</ol>
+<p>获得更高频率分辨率的唯一方法是增加时间记录的长度。</p>
+<p>​        基带FFT、基带子集和缩放FFT  VIs在输入信号和计算频谱之间具有相同的基本关系。对于基带和子集分析，仅通过增加块大小即可获得更高的频率分辨率。增加块大小会导致使用更多行计算FFT。</p>
+<p>​        FFT频谱计算输入信号频谱的幅度和相位或实部和虚部。根据选择的平均模式保留相位信息。这种测量最常用于需要幅值和相位信息的更高级测量。</p>
+<p>单通道测量</p>
+<p>双通道测量</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" data-id="ckv6hiaeq000a2cfdax5y7ahd" data-title="NI说明的笔记" class="article-share-link">分享</a>
+      
+      
+        <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%8B%E9%9B%B7/" rel="tag">王雷</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          本周学习总结（2021.10.18-10.24）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">自适应信号处理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+  <section id="comments" class="vcomment">
+
+  </section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%91%A8%E6%8A%A5/">周报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" rel="tag">孙帅恒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" rel="tag">孙芯年</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" rel="tag">王绍博</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%9B%B7/" rel="tag">王雷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" rel="tag">葛文昌</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%88%E6%99%A8/" rel="tag">陈晨</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%AD%99%E5%B8%85%E6%81%92/" style="font-size: 10px;">孙帅恒</a> <a href="/tags/%E5%AD%99%E8%8A%AF%E5%B9%B4/" style="font-size: 10px;">孙芯年</a> <a href="/tags/%E7%8E%8B%E7%BB%8D%E5%8D%9A/" style="font-size: 10px;">王绍博</a> <a href="/tags/%E7%8E%8B%E9%9B%B7/" style="font-size: 10px;">王雷</a> <a href="/tags/%E8%91%9B%E6%96%87%E6%98%8C/" style="font-size: 10px;">葛文昌</a> <a href="/tags/%E9%99%88%E6%99%A8/" style="font-size: 10px;">陈晨</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E5%AD%99%E8%8A%AF%E5%B9%B4)/">音频数据采集和PEAQ的matlab信号测试</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E9%99%88%E6%99%A8)/">GWPE程序学习</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E8%91%9B%E6%96%87%E6%98%8C)/">本周学习总结（2021.10.18-10.24）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E9%9B%B7)/">NI说明的笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%91%A8%E6%8A%A5(%E7%8E%8B%E7%BB%8D%E5%8D%9A)/">自适应信号处理</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Sun<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "gV7fnKIV0zHALkfaREcR42TB-9Nh9j0Va",
+        appKey: "6whPJ4UtLfXFj4xlmldTPfqd",
+        placeholder: "Just go go",
+        pageSize:'10',
+        avatar:'mm',
+        lang:'zh-cn'
+    });
+</script>
+
+  </div>
+</body>
+</html>
